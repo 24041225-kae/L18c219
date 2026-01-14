@@ -51,7 +51,6 @@ const MODULE_DB = {
     outline: 'This module provides students with the essential skills for managing Linux-based systems and implementing containerization technologies. Students will learn Linux system administration fundamentals, including file management, user permissions, process management, and system troubleshooting. The course also covers containerization tools like Docker, focusing on creating, deploying, and managing containers for scalable application development. Additionally, students will explore orchestration tools like Kubernetes for managing containerized applications in production environments. By the end of the module, students will be proficient in administering Linux systems and leveraging containerization to improve development and deployment workflows.',
     chair: 'Sharmila Kanna'
   }
-  /* (Common ICT has 0 modules – falls through to default) */
 };
 
 /* ---------- helpers ------------------------------------------------- */

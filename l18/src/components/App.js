@@ -13,7 +13,6 @@ export default function App() {
   return (
     <div className="app">
       <Header />
-
       <Routes>
         <Route path="/" element={<HomePage title="Welcome to SOI Diploma Showcase" />} />
         <Route path="about" element={<AboutPage />} />
@@ -27,7 +26,6 @@ export default function App() {
         <Route path="confirmed" element={<ConfirmPage />} />
         <Route path="*" element={<h1 className="not-found">Page Not Found</h1>} />
       </Routes>
-
       <Footer />
     </div>
   );

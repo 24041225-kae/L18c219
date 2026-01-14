@@ -25,10 +25,8 @@ export default function DiplomaDetailPage() {
         {diploma.id}
       </div>
 
-      {/* long description */}
       <p style={{ marginBottom: '1.5em' }}>{diploma.desc}</p>
 
-      {/* ---- clickable module cards ---- */}
       <h4>Modules you will study</h4>
       <ul className="module-cards">
         {diploma.modules.map(m => (
