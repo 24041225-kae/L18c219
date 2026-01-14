@@ -7,6 +7,7 @@ import DiplomaListPage from './Pages/DiplomaListPage';
 import DiplomaDetailPage from './Pages/DiplomaDetailPage';
 import RegisterPage from './Pages/Register';
 import ConfirmPage from './Pages/Confirmation';
+import ModuleDetailPage from './Pages/ModuleDetailPage';
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
         <Route path="about" element={<AboutPage />} />
         <Route path="diplomas" element={<DiplomaListPage />}>
           <Route path=":dipId" element={<DiplomaDetailPage />}>
+            <Route path=":modId" element={<ModuleDetailPage />} />
           </Route>
           <Route index element={<p style={{marginTop:'1rem'}}>Select a diploma above</p>} />
         </Route>

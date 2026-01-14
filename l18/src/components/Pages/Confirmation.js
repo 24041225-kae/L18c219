@@ -8,7 +8,7 @@ export default function ConfirmPage() {
       <h1>Thank You!</h1>
       {state && (
         <>
-          <p>{state.name}, you're now registered for SOI Open-House.</p>
+          <p>{state.name}, we have received your registration of interest.</p>
           <p>Details have been sent to <strong>{state.email}</strong></p>
         </>
       )}

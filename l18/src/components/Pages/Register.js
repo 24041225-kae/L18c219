@@ -15,7 +15,7 @@ export default function RegisterPage() {
 
   return (
     <div className="container">
-      <h1>Register your Interest in any of our SOI diplomas</h1>
+      <h1>Register your Interest for any of our SOI diplomas</h1>
 
       <form onSubmit={handleSubmit}>
         <label>

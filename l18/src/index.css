@@ -240,4 +240,33 @@ footer.container {
   form {
     width: 60%;
   }
+  /* module cards – same look as your screenshot */
+ul.module-cards {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+ul.module-cards li {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  transition: box-shadow 0.2s;
+}
+
+ul.module-cards li:hover {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+ul.module-cards a {
+  display: block;
+  padding: 0.9rem 1rem;
+  color: #222;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+ul.module-cards a:hover {
+  color: #e7212b;
+}
 }

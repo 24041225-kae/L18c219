@@ -1,10 +1,9 @@
-import { useParams, Outlet } from 'react-router-dom';
+import { useParams, Outlet, Link } from 'react-router-dom';
 import { getDiplomaById, getDiplomaTitle } from '../../api';
 
 export default function DiplomaDetailPage() {
   const { dipId } = useParams();
   const diploma = getDiplomaById(dipId);
-
   if (!diploma) return <p className="not-found">Diploma not found</p>;
 
   const title = getDiplomaTitle(dipId);
@@ -13,6 +12,7 @@ export default function DiplomaDetailPage() {
     <>
       <h2>{title}</h2>
 
+      {/* orange badge */}
       <div style={{
         display:'inline-block',
         background:'#FF6A00',
@@ -25,19 +25,28 @@ export default function DiplomaDetailPage() {
         {diploma.id}
       </div>
 
+      {/* long description */}
       <p style={{ marginBottom: '1.5em' }}>{diploma.desc}</p>
 
-
-      <h4><strong><u>Modules you will study</u></strong></h4>
-      <ul style={{ listStyle: 'disc', paddingLeft: '1.25em' }}>
-        {diploma.modules.map(m => <li key={m}>{m}</li>)}
+      {/* ---- clickable module cards ---- */}
+      <h4>Modules you will study</h4>
+      <ul className="module-cards">
+        {diploma.modules.map(m => (
+          <li key={m}>
+            <Link to={`/diplomas/${dipId}/${m.replace(/\s+/g, '-')}`}>
+              {m}
+            </Link>
+          </li>
+        ))}
       </ul>
 
-      <h4><strong><u>Career roles you can take on</u></strong></h4>
+      {/* career list (keep simple) */}
+      <h4>Career roles you can take on</h4>
       <ul style={{ listStyle: 'disc', paddingLeft: '1.25em' }}>
         {diploma.roles.map(r => <li key={r}>{r}</li>)}
       </ul>
 
+      {/* nested outlet for /diplomas/:dipId/:modId */}
       <Outlet />
     </>
   );
